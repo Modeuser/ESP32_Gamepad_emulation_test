@@ -122,12 +122,12 @@ void loop() {
   int reportState = 0;
 
   //ADC1 state checker
-  if (ADC1_value<180)
+  if (ADC1_value<100)
   {
     gamepad->release(XBOX_BUTTON_X);
     gamepad->release(XBOX_BUTTON_Y);
     //Serial.println(ADC1_value);
-  } else if (ADC1_value<400)
+  } else if (ADC1_value<300)
   {
     gamepad->release(XBOX_BUTTON_Y);
     gamepad->press(XBOX_BUTTON_X);
@@ -138,12 +138,12 @@ void loop() {
   }
 
   //ADC2 state checker
-  if (ADC2_value<500)
+  if (ADC2_value<400)
   {
     gamepad->release(XBOX_BUTTON_RB);
     gamepad->release(XBOX_BUTTON_LB);
     //Serial.println(ADC2_value);
-  } else if (ADC2_value<1400)
+  } else if (ADC2_value<1000)
   {
     gamepad->release(XBOX_BUTTON_LB);
     gamepad->press(XBOX_BUTTON_RB);
@@ -154,7 +154,7 @@ void loop() {
   }
 
   //ADC3 state checker
-  if (ADC3_value<700)
+  if (ADC3_value<400)
   {
     gamepad->release(XBOX_BUTTON_RS);
     //Serial.println(ADC3_value);
@@ -163,8 +163,8 @@ void loop() {
     gamepad->press(XBOX_BUTTON_RS);
   }
 
-  //ADC3 state checker
-  if (ADC4_value<700)
+  //ADC4 state checker
+  if (ADC4_value<400)
   {
     gamepad->release(XBOX_BUTTON_LS);
     //Serial.println(ADC4_value);
